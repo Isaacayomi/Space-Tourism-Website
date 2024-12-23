@@ -7,6 +7,7 @@ const bodyEl = document.querySelector("body");
 const mediaQuery = window.matchMedia("(max-width: 630px)");
 const paginations = document.querySelectorAll(".pagination");
 const paginationDots = document.querySelectorAll(".dot");
+const numberedPagination = document.querySelectorAll(".num__pagination");
 // let destinationHeading = document.querySelector(
 //   ".destination__heading"
 // ).textContent;
@@ -60,7 +61,6 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   const toggleCrew = (data) => {
-    console.log(data);
     const crews = data.crew;
     console.log(crews);
     paginationDots.forEach((dots, i) => {
@@ -78,6 +78,27 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   };
+
+  const toggleSpaceLaunch = (data) => {
+    const spaceLaunch = data.technology;
+    numberedPagination.forEach(function (numPag, i) {
+      numPag.addEventListener("click", function () {
+        if (spaceLaunch[i]) {
+          document.querySelector(".technology__name").textContent =
+            spaceLaunch[i].name;
+          document.querySelector(".description").textContent =
+            spaceLaunch[i].description;
+            document.querySelector('.portrait').src = spaceLaunch[i].images.portrait;
+            document.querySelector('.landscape').src = spaceLaunch[i].images.landscape;
+        }
+        numberedPagination.forEach(function (pag) {
+          pag.classList.remove("active__pagination");
+        });
+        numPag.classList.add("active__pagination");
+      });
+    });
+  };
+  // toggleSpaceLaunch();
   // toggleCrew();
   openNavBtn.addEventListener("click", toggleBtn);
   closeNavBtn.addEventListener("click", toggleBtn);
@@ -92,6 +113,7 @@ document.addEventListener("DOMContentLoaded", () => {
       console.log(datas);
       toggleDestination(datas);
       toggleCrew(datas);
+      toggleSpaceLaunch(datas)
     } catch (err) {
       console.log(err.message);
     }
