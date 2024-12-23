@@ -6,6 +6,7 @@ const link = document.querySelector(".links");
 const bodyEl = document.querySelector("body");
 const mediaQuery = window.matchMedia("(max-width: 630px)");
 const paginations = document.querySelectorAll(".pagination");
+const paginationDots = document.querySelectorAll(".dot");
 // let destinationHeading = document.querySelector(
 //   ".destination__heading"
 // ).textContent;
@@ -36,8 +37,8 @@ document.addEventListener("DOMContentLoaded", () => {
     paginations.forEach(function (p, i) {
       p.addEventListener("click", function () {
         console.log(i);
-        // console.log(destinationHeading.textContent);
-        document.querySelector('.destination__heading').style.textTransform = "uppercase";
+        document.querySelector(".destination__heading").style.textTransform =
+          "uppercase";
         if (destinations[i]) {
           document.querySelector(".destination__heading").textContent =
             destinations[i].name;
@@ -47,6 +48,8 @@ document.addEventListener("DOMContentLoaded", () => {
             destinations[i].distance;
           document.querySelector(".time p").textContent =
             destinations[i].travel;
+          document.querySelector(".destination__img").src =
+            destinations[i].images.png;
         }
         paginations.forEach(function (pagItem, i) {
           pagItem.classList.remove("active");
@@ -55,8 +58,27 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   };
-  // toggleDestination(data);
 
+  const toggleCrew = (data) => {
+    console.log(data);
+    const crews = data.crew;
+    console.log(crews);
+    paginationDots.forEach((dots, i) => {
+      dots.addEventListener("click", function () {
+        if (crews[i]) {
+          document.querySelector(".crew__image").src = crews[i].images.png;
+          document.querySelector(".role").textContent = crews[i].role;
+          document.querySelector(".name").textContent = crews[i].name;
+          document.querySelector(".summary").textContent = crews[i].bio;
+        }
+        paginationDots.forEach((pagDot) => {
+          pagDot.classList.remove("active");
+        });
+        dots.classList.add("active");
+      });
+    });
+  };
+  // toggleCrew();
   openNavBtn.addEventListener("click", toggleBtn);
   closeNavBtn.addEventListener("click", toggleBtn);
 
@@ -69,6 +91,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const datas = await res.json(); // gets the datas
       console.log(datas);
       toggleDestination(datas);
+      toggleCrew(datas);
     } catch (err) {
       console.log(err.message);
     }
