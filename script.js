@@ -25,7 +25,7 @@ const toggleBtn = () => {
     anime({
       targets: ".links",
       translateX: [50, 0],
-      easings: "easeOutExpo",
+      easings: "easeInExpo",
     });
     if (link.style.display === "none") {
       link.style.display = "block";
