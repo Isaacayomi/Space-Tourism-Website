@@ -1,19 +1,46 @@
-# Using the Figma design file
+# Frontend Mentor - Space tourism website solution
 
-Using this design file will help you practice building projects in the same way professionals do. Seeing the details in the design will help you improve your accuracy and build projects faster.
+This is a solution to the [Space tourism website challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/space-tourism-multipage-website-gRWj1URZ3). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
-[Figma](https://www.figma.com/) is an extremely popular design tool with a generous free tier and support for both Windows and Mac computers.
+## Table of contents
 
-To get started with Figma, [download the correct app for your operating system](https://www.figma.com/downloads/). You can then open the app and open the `.fig` design file by dragging it over the app or using the "import" button.
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Useful resources](#useful-resources)
 
-If you're going to use the Desktop App, you don't need to download the Font Installer from the downloads page. But if you're planning on using the Figma web app you should download and install it to ensure the fonts show up correctly.
+## Overview
 
-If you haven't used Figma before, we recommend reading our "[Figma for developers: How to work with a design file](https://www.frontendmentor.io/articles/figma-for-developers-how-to-work-with-a-design-file-m6CZKZ1rC1)" article. 
+### The challenge
 
----
+Users should be able to:
 
-**⚠️ IMPORTANT ⚠️: Please be sure not to share our design files with anyone else. We include `.gitignore` files in the starter code download to help prevent you from accidentally uploading it to GitHub. Another easy way to prevent this is to keep the design file separate from your codebase.**
+- View the optimal layout for each of the website's pages depending on their device's screen size
+- See hover states for all interactive elements on the page
+- View each page and be able to toggle between the tabs to see new information
 
----
+### Screenshot
 
-We hope you enjoy the challenge! 🙂
+![Desktop view](./assets/Screenshot%20(37).png)
+![Mobile view](./assets/iPhone-12-PRO-MAX-127.0.0.1.png)
+
+
+### Links
+
+- Solution URL: [https://github.com/Isaacayomi/Space-Tourism-Website](https://github.com/Isaacayomi/Space-Tourism-Website)
+- Live Site URL: [https://prime=space-tourism.vercel.app](https://prime-space-tourism.vercel.app)
+
+## My process
+
+### Built with
+
+- Semantic HTML5 markup
+- CSS custom properties
+- Flexbox
+- [Anime.js](https://animejs.com/) - Animation library
+
+
