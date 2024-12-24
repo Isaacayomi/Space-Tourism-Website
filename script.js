@@ -22,6 +22,11 @@ const crewSummary = document.querySelector(".summary");
 
 const toggleBtn = () => {
   if (mediaQuery.matches) {
+    anime({
+      targets: ".links",
+      translateX: [50, 0],
+      easings: "easeOutExpo",
+    });
     if (link.style.display === "none") {
       link.style.display = "block";
       openNavBtn.style.display = "none";
@@ -127,8 +132,6 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   };
-  // toggleSpaceLaunch();
-  // toggleCrew();
   openNavBtn.addEventListener("click", toggleBtn);
   closeNavBtn.addEventListener("click", toggleBtn);
 

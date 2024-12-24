@@ -49,6 +49,7 @@ nav {
   backdrop-filter: blur(40px);
   max-width: 41.5rem;
   width: 100%;
+  transition: .2s linear;
 }
 
 .nav__links {
