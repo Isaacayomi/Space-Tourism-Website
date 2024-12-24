@@ -25,8 +25,8 @@ Users should be able to:
 
 ### Screenshot
 
-![Desktop view](./assets/Screenshot%20(37).png)
-![Mobile view](./assets/iPhone-12-PRO-MAX-127.0.0.1.png)
+![Desktop view](../assets/Screenshot%20(37).png)
+![Mobile view](../assets/iPhone-12-PRO-MAX-127.0.0.1.png)
 
 
 ### Links
